@@ -1,0 +1,69 @@
+* {
+  scroll-behavior: smooth;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.navbar {
+  --bs-navbar-padding-y: 0.2rem !important;
+}
+.header_section {
+  --bs-bg-opacity: 1;
+  /* border-top-width: 50%; */
+  /* height: auto; */
+  width: 100%;
+  /* padding-top: 4rem; */
+  float: left;
+  /* background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.186),
+      rgba(15, 15, 15, 0.815)
+    ),
+    url("../../Assets/books.jpg"); */
+  background-color: #f9f9f9f7;
+  /* min-height: auto; */
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.bg-body-tertiaries {
+  /* background: linear-gradient(45deg, transparent 46%, #f9f9f9f7 42%); */
+  background: #f9f9f9f7;
+  /* background: transparent; */
+}
+.nav-link {
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  margin-right: 1.3rem !important;
+  transition: all 0.5s ease !important;
+  text-align: center;
+}
+.nav-link:hover {
+  border-bottom: 1px solid black !important;
+}
+@media screen and (max-width: 769px) {
+  .bg-body-tertiaries {
+    background: #ffffff97 !important;
+    background-size: cover !important;
+  }
+  .navbar-logo {
+    color: black !important;
+    /* background-color:black; */
+  }
+  .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.748);
+    color: rgba(255, 255, 255, 0.829) !important;
+  }
+}
+/* WebKit-based browsers (Chrome, Safari) */
+/* Track */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; /* Set the color of the scrollbar handle */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
