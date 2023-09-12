@@ -19,9 +19,7 @@ export const UpdateBlog = (state, action) => {
 export const DeleteBlog = (state, action) => {
   let blogData = JSON.parse(localStorage.getItem("blogData"));
   const idToRemove = action.payload;
-  console.log(idToRemove);
   const updatedData = blogData.filter((item) => item.id !== idToRemove);
-  console.log(updatedData);
   localStorage.setItem(`blogData`, JSON.stringify(updatedData));
 };
 
@@ -41,7 +39,6 @@ export const BlogLike = (state, action) => {
   let blogData = JSON.parse(localStorage.getItem("blogData"));
 
   const idToLike = action.payload;
-  console.log(idToLike);
   const result = blogData.find((item) => item.id == idToLike);
   const updatedData = blogData.filter((item) => item.id !== idToLike);
   result.likes += 1;
@@ -52,7 +49,6 @@ export const BlogLike = (state, action) => {
 export const BlogDislike = (state, action) => {
   let blogData = JSON.parse(localStorage.getItem("blogData"));
   const idToLike = action.payload;
-  console.log(idToLike);
   const result = blogData.find((item) => item.id == idToLike);
   const updatedData = blogData.filter((item) => item.id !== idToLike);
   result.likes = result.likes - 1 >= 0 ? result.likes - 1 : 0;

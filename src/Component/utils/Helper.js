@@ -69,7 +69,6 @@ export const ScrollToTop = () => {
 
 export const filterBlogs = (searchQuery, blogs) => {
   // Convert the search query to lowercase for case-insensitive matching
-  console.log(searchQuery);
   const query = searchQuery?.toLowerCase();
 
   // Use the filter() method to filter the blogs

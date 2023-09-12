@@ -12,7 +12,6 @@ const BlogForm = () => {
     if (id) {
       const blogDetails = JSON.parse(localStorage.getItem("blogData"));
       const result = blogDetails.find((item) => item.id == id);
-      console.log(result);
       setFirstName(result.name.split(" ")[0] ? result.name.split(" ")[0] : "");
       setLastName(result.name.split(" ")[1] ? result.name.split(" ")[1] : "");
       setBlogTitle(result.title ? result.title : "");
@@ -34,7 +33,6 @@ const BlogForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   // const { newBlogId } = useSelector((state) => state.blogReducer);
-  // console.log(c);
   const ClearData = () => {
     // Clear the form data by resetting the state to empty values
     setFirstName("");

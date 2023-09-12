@@ -15,7 +15,6 @@ const Blogsdetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log("id", id);
   const blogDetails = JSON.parse(localStorage.getItem("blogData"))
     ? JSON.parse(localStorage.getItem("blogData"))
     : [];
@@ -43,8 +42,6 @@ const Blogsdetails = () => {
     navigate("/");
   };
 
-  console.log(id);
-  console.log(result);
 
   return (
     <div className="blogs-details">

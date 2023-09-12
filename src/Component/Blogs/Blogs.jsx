@@ -29,7 +29,6 @@ const Blogs = () => {
     setDislike(!dislike);
     if (like) setLike(false);
   };
-  console.log(reversedBlogs);
   useEffect(() => {
     dispatch({ type: "GetAllBlog" });
   }, [localStorage.getItem("blogData")]);
