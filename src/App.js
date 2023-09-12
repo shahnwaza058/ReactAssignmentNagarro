@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import { ScrollToTop } from "./Component/utils/Helper";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
-import { AppProvider } from "./Assets/Context/Context";
+import { AppProvider } from "./Context/Context";
 function App() {
   const [isDataLoad, setIsDataLoad] = useState(false);
   useEffect(() => {
