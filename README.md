@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Blog post app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Developed a “Blog post app” using React and Redux. it display list of blog post. Users can add new post, view the details of the blog post, 
+edit the blog post and can delete the blog post, Users can like the blog post.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **View Blogs:** Users can view all blogs.
+<img width="960" alt="Screenshot 2023-08-29 143535" src="https://github.com/shahnwaza058/nodejsassignment_nagarro/assets/138658659/96b13b7d-ad67-4614-ba1b-bc1a972ad172">
+<img width="960" alt="Screenshot 2023-08-29 143554" src="https://github.com/shahnwaza058/nodejsassignment_nagarro/assets/138658659/3df0ff65-5f9f-4c87-a9ca-76072e73f269">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Add New Blogs:** Users can add new Blogs records to the system localstorage.
+<img width="960" alt="Screenshot 2023-08-29 143609" src="https://github.com/shahnwaza058/nodejsassignment_nagarro/assets/138658659/76aa69eb-beab-4a58-b51a-4196e1a2219a">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Edit Blogs:** Users can edit existing Blogs records. They can update Blogs details.
+<img width="960" alt="Screenshot 2023-08-29 143700" src="https://github.com/shahnwaza058/nodejsassignment_nagarro/assets/138658659/83f6b0c5-83eb-45c6-83fc-1efe7a7b8a06">
 
-### `npm test`
+- **Delete Blogs:** Users can delete Blogs records.
+  
+<img width="476" alt="Screenshot 2023-08-29 143826" src="https://github.com/shahnwaza058/nodejsassignment_nagarro/assets/138658659/239d1c8f-a5a6-4bb3-ae5a-ede194b9facc">
+<img width="481" alt="Screenshot 2023-08-29 143814" src="https://github.com/shahnwaza058/nodejsassignment_nagarro/assets/138658659/c32b1f0b-a071-43f3-b234-06fc337d7815">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+1. **Clone the Repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/shahnwaza058/nodejsassignment_nagarro.git
+   cd nodejsassignment_nagarro
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Environment Variables:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Create a `.env` file in the root directory and configure the following variables:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```plaintext
+   PORT=3000
+   MONGO_URI=your_database_connection_string
+   JWT_SECRET=your_JWT_SECRET
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Start the Application:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+   The application will be accessible at `http://localhost:3000`.
+   This application is also hosted on the vercel: ``
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
