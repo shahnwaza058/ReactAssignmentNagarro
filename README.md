@@ -6,8 +6,8 @@ edit the blog post and can delete the blog post, Users can like the blog post.
 
 ## Features
 - **Home Page:** Users can view all blogs.On home page users can see top 4 latest blogs
-<img width="420" alt="Screenshot 2023-09-13 144759" src="https://github.com/shahnwaza058/ReactAssignmentNagarro/assets/138658659/273168c8-fb98-49cd-8d2a-40e39d268b53">
-<img width="420" alt="Screenshot 2023-09-13 144837" src="https://github.com/shahnwaza058/ReactAssignmentNagarro/assets/138658659/c4266fc6-2a9c-4cdd-866a-c3c637d816e8">
+<img width="400" alt="Screenshot 2023-09-13 144759" src="https://github.com/shahnwaza058/ReactAssignmentNagarro/assets/138658659/273168c8-fb98-49cd-8d2a-40e39d268b53">
+<img width="400" alt="Screenshot 2023-09-13 144837" src="https://github.com/shahnwaza058/ReactAssignmentNagarro/assets/138658659/c4266fc6-2a9c-4cdd-866a-c3c637d816e8">
 <img width="450" alt="Screenshot 2023-09-13 144859" src="https://github.com/shahnwaza058/ReactAssignmentNagarro/assets/138658659/8a36d2fc-830c-4c71-bac9-5055f57293f3">
 <img width="450" alt="Screenshot 2023-09-13 144849" src="https://github.com/shahnwaza058/ReactAssignmentNagarro/assets/138658659/cce22b6a-6e41-4230-b4eb-bb6d7c1be37c">
 
