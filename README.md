@@ -48,5 +48,5 @@ edit the blog post and can delete the blog post, Users can like the blog post.
    ```
 
    The application will be accessible at `http://localhost:3000`.
-   This application is also hosted on the vercel: ``
+#This application is also hosted on the vercel: `https://react-assignment-nagarro.vercel.app/`
 
