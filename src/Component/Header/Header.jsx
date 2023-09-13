@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -7,8 +7,23 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../../Assets/logo-black.png";
 import "../Style/header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useGlobalContext } from "../../Context/Context";
 const Header = () => {
+  const navigate = useNavigate();
+  const { searchInput, setSearchInput } = useGlobalContext();
+  const [inputValue, setInputValue] = useState("");
+  const handleSearch = () => {
+    setSearchInput(inputValue);
+    navigate(`/blogs?search=${inputValue}`);
+    setInputValue("");
+  };
+  const handleSearchEnter = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+  console.log(searchInput);
   return (
     <div className="header_section">
       <Navbar expand="lg" className="bg-body-tertiaries" fixed="top">
@@ -39,6 +54,20 @@ const Header = () => {
                 Add Blog
               </Link>
             </Nav>
+            <div className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={handleSearchEnter}
+              />
+              <Button variant="outline-dark" onClick={handleSearch}>
+                Search
+              </Button>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

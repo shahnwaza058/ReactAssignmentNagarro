@@ -8,27 +8,29 @@ import { formatDate, getTimeAgo } from "../utils/Helper";
 
 import { useDispatch, useSelector } from "react-redux";
 import Button from "react-bootstrap/esm/Button";
+import { useGlobalContext } from "../../Context/Context";
 const Blogs = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.blogReducer);
-  const reversedBlogs = data
-    ? isHomePage
-      ? [...data].reverse().slice(0, 4)
-      : [...data].reverse()
-    : [];
+  const isHomePage = location.pathname === "/";
+  const { searchInput, setSearchInput } = useGlobalContext();
+  const searchParams = new URLSearchParams(location.search);
+  const query = searchParams.get("search");
+  console.log(query);
 
-  const [like, setLike] = useState(false);
-  const [dislike, setDislike] = useState(false);
-  const handleLike = () => {
-    setLike(!like);
-    if (dislike) setDislike(false);
-  };
-  const handleDislike = () => {
-    setDislike(!dislike);
-    if (like) setLike(false);
-  };
+  const { data, filterData } = useSelector((state) => state.blogReducer);
+  const reversedBlogs =
+    query && filterData
+      ? filterData
+      : data
+      ? isHomePage
+        ? [...data].reverse().slice(0, 4)
+        : [...data].reverse()
+      : [];
+
+  useEffect(() => {
+    if (query) dispatch({ type: "BlogFileterData", payload: query });
+  }, [query]);
   useEffect(() => {
     dispatch({ type: "GetAllBlog" });
   }, [localStorage.getItem("blogData")]);
@@ -92,7 +94,11 @@ const Blogs = () => {
             <>
               <div className="container w-100 text-center mt-4 d-flex justify-content-center flex-column align-items-center">
                 <BiMessageRoundedError size={80} className="text-warning" />
-                <p className="lead">Be the first to post your blog...</p>
+                <p className="lead">
+                  {query && filterData.length == 0
+                    ? "No Blog Found"
+                    : "Be the first to post your blog..."}
+                </p>
                 <Link to="/add-blog" className="mt-3">
                   <Button variant="outline-dark" className="w-full">
                     Add Blog

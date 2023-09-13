@@ -74,7 +74,11 @@ export const filterBlogs = (searchQuery, blogs) => {
   // Use the filter() method to filter the blogs
   const filteredBlogs = blogs?.filter((blog) => {
     // Check if the title, description, or name contains the search query
-    return blog?.category?.toLowerCase().includes(query);
+    return (
+      blog?.name?.toLowerCase().includes(query) ||
+      blog?.category?.toLowerCase().includes(query) ||
+      blog?.title?.toLowerCase().includes(query)
+    );
   });
 
   return filteredBlogs;

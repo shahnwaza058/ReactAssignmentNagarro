@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+import { filterBlogs } from "../../Component/utils/Helper";
 
 export const AddBlog = (state, action) => {
   let blogData = JSON.parse(localStorage.getItem("blogData"));
@@ -54,4 +55,13 @@ export const BlogDislike = (state, action) => {
   result.likes = result.likes - 1 >= 0 ? result.likes - 1 : 0;
   updatedData.push(result);
   localStorage.setItem(`blogData`, JSON.stringify(updatedData));
+};
+
+export const BlogFileterData = (state, action) => {
+  try {
+    const data = filterBlogs(action.payload, state.data);
+    state.filterData = data;
+  } catch (error) {
+    toast.error("something went wrong!");
+  }
 };

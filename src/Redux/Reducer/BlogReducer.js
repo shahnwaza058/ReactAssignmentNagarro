@@ -2,6 +2,7 @@ import { createReducer } from "@reduxjs/toolkit";
 import {
   AddBlog,
   BlogDislike,
+  BlogFileterData,
   BlogLike,
   DeleteBlog,
   Error,
@@ -12,6 +13,7 @@ import {
 import data from "../../Data.json";
 const initialState = {
   data: data,
+  filterData: [],
 };
 export const blogReducer = createReducer(initialState, {
   AddBlog: AddBlog,
@@ -20,6 +22,7 @@ export const blogReducer = createReducer(initialState, {
   GetAllBlog: GetAllBlog,
   BlogLike: BlogLike,
   BlogDislike: BlogDislike,
+  BlogFileterData: BlogFileterData,
   Success: Success,
   Error: Error,
 });
